@@ -1,7 +1,6 @@
 {
   "name": "learn-sessions",
   "version": "0.0.1",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -9,6 +8,7 @@
   "author": "Anirudh B S",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "express-session": "^1.15.6"
   }
 }
