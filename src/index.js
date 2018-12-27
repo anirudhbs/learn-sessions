@@ -1,9 +1,17 @@
 const express = require('express')
 const app = express()
 const session = require('express-session')
+const RedisStore = require('connect-redis')(session)
+
+const redisStoreOptions = {
+  host: 'localhost',
+  port: 6379,
+  ttl: 60000
+}
 
 app.use(
   session({
+    store: new RedisStore(redisStoreOptions),
     secret: '2pac',
     resave: false,
     saveUninitialized: true,
